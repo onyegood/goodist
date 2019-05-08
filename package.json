@@ -1,0 +1,25 @@
+{
+  "name": "goodist",
+  "version": "1.0.0",
+  "description": "Simple node array manipulation library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onyegood/goodist.git"
+  },
+  "keywords": [
+    "array",
+    "object",
+    "push",
+    "pull"
+  ],
+  "author": "Ofoegbu Goodnews Onyekachi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onyegood/goodist/issues"
+  },
+  "homepage": "https://github.com/onyegood/goodist#readme"
+}

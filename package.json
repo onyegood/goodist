@@ -11,6 +11,10 @@
     "url": "git+https://github.com/onyegood/goodist.git"
   },
   "keywords": [
+    "pushOne",
+    "pullOne",
+    "pullMany",
+    "pullOne",
     "array",
     "object",
     "push",

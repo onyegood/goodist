@@ -1,4 +1,5 @@
 Let's say I have two Schema objects, employeeSchema and leaveSchema as shown in the steps below.
+
 Step 1
 ```
 //Employee Schema

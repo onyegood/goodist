@@ -1,5 +1,6 @@
 Let's say I have two Schema objects, employeeSchema and leaveSchema as shown in the steps below.
 Step 1
+```
 //Employee Schema
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
@@ -21,8 +22,8 @@ const employeeSchema = new Schema({
   resetTokenExpiration: Date
 }, { timestamps: true });
 module.exports = mongoose.model('Employee', employeeSchema);
-
-
+```
+```
 //Leave Schema
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
@@ -47,6 +48,7 @@ const leaveSchema = new Schema({
   }
 }, { timestamps: true });
 module.exports = mongoose.model('Leave', leaveSchema);
+```
 
 
 Step 2
@@ -61,12 +63,12 @@ So here is where my library (goodist) come to play a big role. See code snippet.
 
 First thing first install the library
 
-npm i goodist.
+```npm i goodist.```
 
 Import it as shown below
-const goodist = require('goodist');
+```const goodist = require('goodist');```
 
-//To Create a Leave Request
+```//To Create a Leave Request
 exports.create = async (req, res, next) => {
   const errors = validationResult(req);
   const { startDate, endDate, comment, leavetype } = req.body;
@@ -100,8 +102,9 @@ exports.create = async (req, res, next) => {
     next(err);
   }
 }
+```
 
-
+```
 //To Delete Leave Request
 exports.delete = async (req, res, next) => {
   const errors = validationResult(req);
@@ -141,32 +144,40 @@ exports.delete = async (req, res, next) => {
     next(err);
   }
 }
-
+```
 goodist expose 4 helpful methods pushOne, pushMany, pullOne and pullMany.
 
 i. pushOne to add one item in the array.
 
 ==Usage==
+```
 const employee = await Employee.findById(employeeID);
 goodist.pushOne(leave, employee.leave, employee);
+```
 
 ii. pullOne to remove one item from the array.
 
 ==Usage==
+```
 const employee = await Employee.findById(employeeID);
 goodist.pullOne(leave, employee.leave, employee);
+```
 
 iii. pushMany to add more than one items in the array at a time.
 
 ==Usage==
+```
 const employee = await Employee.findById(employeeID);
 goodist.pushMany(leave, employee.leave, employee);
+```
 
 iv. pullMany to remove more than one items from the array at a time.
 
 ==Usage==
+```
 const employee = await Employee.findById(employeeID);
 goodist.pullMany(leave, employee.leave, employee);
+```
 
 Note:
 leave:- represent what you want to push. In my case it is the leave object

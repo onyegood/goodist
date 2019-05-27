@@ -1,6 +1,6 @@
 {
   "name": "goodist",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple node array manipulation library",
   "main": "index.js",
   "scripts": {
